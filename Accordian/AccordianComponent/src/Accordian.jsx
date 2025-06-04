@@ -6,8 +6,8 @@ const Accordian = ({ data }) => {
   const [multiple, setMultiple] = useState([]);
 
   const handleClick = (getCurrentid) => {
-    console.log(getCurrentid);
-    setSelect(getCurrentid);
+    // console.log(getCurrentid);
+    setSelect(getCurrentid === select ? null : getCurrentid);
   };
   return (
     <div className="wrapper">
