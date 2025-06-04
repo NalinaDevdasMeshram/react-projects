@@ -5,9 +5,16 @@ const Accordian = ({ data }) => {
   const [enableMultiple, setEnableMultiple] = useState(false);
   const [multiple, setMultiple] = useState([]);
 
-  const handleClick = (getCurrentid) => {
-    // console.log(getCurrentid);
+  const handleSingleSelection = (getCurrentid) => {
     setSelect(getCurrentid === select ? null : getCurrentid);
+  };
+  const handleMultiSelection = (getCurrentid) => {
+    let cpyMultiple = [...multiple];
+    const IndexOfCurrentId = cpyMultiple.indexOf(getCurrentid);
+    console.log(IndexOfCurrentId);
+    if (IndexOfCurrentId === -1) cpyMultiple.push(getCurrentid);
+    else cpyMultiple.splice(IndexOfCurrentId, 1);
+    setMultiple(multiple);
   };
   return (
     <div className="wrapper">
@@ -21,15 +28,21 @@ const Accordian = ({ data }) => {
               <>
                 <div className="container" key={dataitem}>
                   <div
-                    onClick={() => handleClick(dataitem.id)}
+                    onClick={
+                      enableMultiple
+                        ? () => handleMultiSelection(dataitem.id)
+                        : () => handleSingleSelection(dataitem.id)
+                    }
                     className="title"
                   >
                     {dataitem.question}
                     <span>+</span>
                   </div>
-                  {select === dataitem.id ? (
-                    <div> {dataitem.answer} </div>
-                  ) : null}
+                  {enableMultiple
+                    ? multiple.indexOf(dataitem.id) !== -1 && (
+                        <div>{dataitem.answer}</div>
+                      )
+                    : select === dataitem.id && <div>{dataitem.answer}</div>}
                 </div>
               </>
             );
