@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.Accordian {
+  border: 2px solid red;
+  padding: 5px;
+  margin: 10px;
+  font-size: 20px;
+}
+.container {
+  border: 2px solid red;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 4px 4px;
+}
+span {
+  border: 2px solid springgreen;
+  margin-top: 1px;
+  margin-left: 50%;
+}
+.title {
+  font-weight: 800;
+}
