@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { useState } from "react";
 
 const App = () => {
@@ -11,9 +11,7 @@ const App = () => {
 
   const handleHexColor = () => {
     const hex = [1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
-    console.log(hex);
     let hexColor = "#";
-    console.log(hexColor);
     for (let i = 0; i < 6; i++) {
       hexColor += hex[ColorUtility(hex.length)];
     }
@@ -24,7 +22,7 @@ const App = () => {
     const r = ColorUtility("256");
     const g = ColorUtility("256");
     const b = ColorUtility("256");
-    setColor(`rgb (${r} ${g} ${b})`);
+    setColor(`rgb(${r}, ${g}, ${b})`);
   };
 
   return (
