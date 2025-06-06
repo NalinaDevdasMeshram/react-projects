@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.star-rating {
+  border: 1px solid red;
+}
+
+.starts {
+  background-color: white;
+  display: inline-block;
+  margin: 15px;
+}
+.active {
+  color: #fff700;
+}
+
+.inactive {
+  color: #000000;
+}
