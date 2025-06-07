@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  border: 1px solid red;
+  width: 50%;
+  height: 50rem;
+}
+.arrow arrow-left {
+  border: 2px solid orange;
+}
+
+.arrow arrow-right {
+  border: 2px solid green;
+}
