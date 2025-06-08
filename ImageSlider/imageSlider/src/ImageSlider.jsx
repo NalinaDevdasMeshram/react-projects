@@ -26,9 +26,11 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
   const handleprevious = () => {
     setCurrentSlide(currentSlide === 0 ? image.length - 1 : currentSlide - 1);
   };
+
   const handlenext = () => {
     setCurrentSlide(currentSlide === image.length - 1 ? 0 : currentSlide + 1);
   };
+
   useEffect(() => {
     if (url !== "") {
       fetchImage(url);
@@ -48,31 +50,35 @@ const ImageSlider = ({ url, limit = 5, page = 1 }) => {
       <SlArrowLeft onClick={handleprevious} className="arrow arrow-left" />
       {image && image.length
         ? image.map((imgItem, index) => {
-            <img
-              key={imgItem.id}
-              src={imgItem.url}
-              alt={imgItem.download_url}
-              className={
-                currentSlide === index
-                  ? "current-image"
-                  : "current-image hide-current-image"
-              }
-            />;
+            return (
+              <img
+                key={imgItem.id}
+                src={imgItem.download_url}
+                alt={imgItem.download_url}
+                className={
+                  currentSlide === index
+                    ? "current-image"
+                    : "current-image hide-current-image"
+                }
+              />
+            );
           })
         : null}
       <SlArrowRight onClick={handlenext} className="arrow arrow-right" />
       <span className="circle-indicator">
         {image && image.length
           ? image.map((_, index) => {
-              <button
-                key={index}
-                className={
-                  currentSlide === index
-                    ? "current-indicator"
-                    : "current-indicator inactive-indicator"
-                }
-                onClick={() => setCurrentSlide(index)}
-              ></button>;
+              return (
+                <button
+                  key={index}
+                  className={
+                    currentSlide === index
+                      ? "current-indicator"
+                      : "current-indicator inactive-indicator"
+                  }
+                  onClick={() => setCurrentSlide(index)}
+                ></button>
+              );
             })
           : null}
       </span>
