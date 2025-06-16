@@ -1,6 +1,6 @@
 // import React from "react";
 import { useState } from "react";
-
+import "./App.css";
 const App = () => {
   const [typeOfColor, setTypeOfColor] = useState("hex");
   const [color, setColor] = useState("#000000");
@@ -26,7 +26,7 @@ const App = () => {
   };
 
   return (
-    <div style={{ width: "100wh", height: "100vh", background: color }}>
+    <div style={{ width: "100vw", height: "100vh", background: color }}>
       <button onClick={() => setTypeOfColor("hex")}>Hex Color</button>
       <button onClick={() => setTypeOfColor("rgb")}>RGB Color</button>
       <button onClick={typeOfColor === "hex" ? handleHexColor : handleRGBColor}>

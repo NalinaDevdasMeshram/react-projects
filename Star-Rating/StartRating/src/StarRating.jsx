@@ -22,7 +22,6 @@ export default function StarRating({ noOfStars = 5 }) {
     <div className="star-rating">
       {[...Array(noOfStars)].map((_, index) => {
         index += 1;
-
         return (
           <div className="starts">
             <FaStar

@@ -22,7 +22,6 @@ nav {
   font-size: 20px;
   width: 500px;
   height: 100px;
-  display: flex;
   border: 1px solid red;
   gap: 30px;
 }
@@ -31,16 +30,17 @@ nav {
   font-weight: 800;
   font-size: 20px;
   display: inline-block;
+  gap: 30px;
 }
 
-img {
+/* img {
   margin-top: 10px;
   width: 200px;
   height: 300px;
   display: flex;
   justify-content: center;
   border: 2px solid green;
-}
+} */
 
 button {
   margin-top: 20px;
@@ -51,4 +51,14 @@ button {
   background-color: blue;
   color: white;
   border: none;
+}
+p {
+  font-size: 20px;
+}
+
+.herosection img {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  margin-left: 50px;
 }

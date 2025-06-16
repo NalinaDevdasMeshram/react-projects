@@ -1,5 +1,3 @@
-import react from "react";
-
 import Accordian from "./Accordian";
 
 function App() {

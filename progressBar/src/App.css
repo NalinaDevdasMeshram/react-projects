@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  text-align: center;
+}
+
+.outer {
+  border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.inner {
+  background-color: green;
+}

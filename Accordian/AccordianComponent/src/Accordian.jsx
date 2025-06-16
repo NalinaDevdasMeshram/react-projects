@@ -8,6 +8,7 @@ const Accordian = ({ data }) => {
   const handleSingleSelection = (getCurrentid) => {
     setSelect(getCurrentid === select ? null : getCurrentid);
   };
+
   const handleMultiSelection = (getCurrentid) => {
     let cpyMultiple = [...multiple];
     const IndexOfCurrentId = cpyMultiple.indexOf(getCurrentid);
@@ -16,6 +17,7 @@ const Accordian = ({ data }) => {
     else cpyMultiple.splice(IndexOfCurrentId, 1);
     setMultiple(multiple);
   };
+
   return (
     <div className="wrapper">
       <button onClick={() => setEnableMultiple(!enableMultiple)}>

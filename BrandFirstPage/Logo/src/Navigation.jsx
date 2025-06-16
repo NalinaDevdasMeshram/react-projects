@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import logo from "./assets/Screenshot 2025-06-12 141245.png";
-import Brandlogo from "./assets/Screenshot 2025-06-12 141535.png";
+
 const Navigation = () => {
   return (
     <nav>

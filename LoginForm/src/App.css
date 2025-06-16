@@ -20,11 +20,10 @@ body {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid red;
 }
 .form-toggle {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 10px;
 }
 .form-toggle button {
