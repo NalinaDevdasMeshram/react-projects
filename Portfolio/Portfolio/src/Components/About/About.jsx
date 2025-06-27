@@ -1,6 +1,6 @@
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
-import img from "../../assets/linkedinprofile-modified.png";
+import img from "../../assets/imgprofile.png";
 
 const About = () => {
   return (
@@ -21,9 +21,9 @@ const About = () => {
           </h2>
           {/* Skill heading typing Effect */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
-            <span className="text-white">I am a</span>
+            <span className="text-white">I am a </span>
             <ReactTypingEffect
-              text={["FrontEnd Developer, App Developer, Coder"]}
+              text={["FrontEnd Developer", "App Developer", "Coder"]}
               speed={100}
               eraseSpeed={50}
               typingDelay={500}
@@ -45,7 +45,7 @@ const About = () => {
           {/* Resume Button */}
 
           <a
-            href="file:///C:/Users/ADMIN/Desktop/NalinaLatestResume%20(1).pdf"
+            href="/NalinaLatestResume%20(1).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105"
