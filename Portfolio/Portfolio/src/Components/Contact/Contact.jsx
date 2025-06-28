@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
@@ -8,6 +9,40 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_axr66iz", // Replace with your EmailJS Service ID
+        "template_bcmrmvf", // Replace with your EmailJS Template ID
+        form.current,
+        "Xj6vSkc4eU55GFtPi" // Replace with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          setIsSent(true);
+          form.current.reset(); // Reset form fields after sending
+          toast.success("Message sent successfully! ✅", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "dark",
+          });
+        },
+        (error) => {
+          console.error("Error sending message:", error);
+          toast.error("Failed to send message. Please try again.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "dark",
+          });
+        }
+      );
   };
   return (
     <section
