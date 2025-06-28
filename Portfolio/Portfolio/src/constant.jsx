@@ -67,7 +67,7 @@ export const skillsInfo = [
   },
 ];
 
-export const Education = [
+export const education = [
   {
     id: 0,
     img: Degreelogo,
