@@ -1,0 +1,119 @@
+.main-container {
+  box-shadow: 0px 10px 26px -4px rgb(0, 0, 0, 0.1);
+}
+
+.file-btn {
+  width: 350px;
+  height: 150px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #6753e9;
+  background-color: white;
+  border: 2px dashed #5139e9;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.file-btn:hover {
+  color: #6753e9;
+  background-color: #fff;
+}
+
+.file-btn span {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #5139e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  background-color: #e6e5f1;
+}
+
+.file-card {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: #2d2b2b;
+  background-color: #fff;
+  border: 2px solid rgb(95, 73, 241, 0.281);
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0px 10px 26px -4px rgba(0, 0, 0, 0.1);
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-info h2 {
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.progress-bg {
+  width: 100px;
+  height: 5px;
+  background-color: #e6e5f1;
+  border-radius: 10px;
+  margin-top: 7px;
+}
+
+.progress {
+  width: 0%;
+  height: 5px;
+  background-color: #6753e9;
+  border-radius: 8px;
+  transition: width 0.3s ease;
+}
+
+.file-icon {
+  font-size: 20px;
+  color: #6753e9;
+}
+
+.close-icon {
+  color: #563eee;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.file-info button,
+.check-circle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #6753e9;
+  background-color: #e6e5f1;
+  border: none;
+  border-radius: 8px;
+}
+
+.upload-btn {
+  width: 350px;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #6753e9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}

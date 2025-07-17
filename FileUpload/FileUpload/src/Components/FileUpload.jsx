@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdOutlineDriveFolderUpload } from "react-icons/md";
 import { FaFileMedical } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -10,7 +10,23 @@ const FileUpload = () => {
   const [uploadstatus, setUploadstatus] = useState("select");
 
   // use for testing
-  const simulateUpload = (progressCallback) => {};
+  const simulateUpload = (progressCallback) => {
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress = 10;
+      if (progress === 100) {
+        clearInterval(interval);
+      }
+      progressCallback(progress);
+    }, 500);
+  };
+
+  useEffect(() => {
+    if (uploadstatus === "done") {
+      simulateUpload(setProgress);
+      setTimeout(() => setSelectFile("done"), 5000);
+    }
+  }, [uploadstatus]);
 
   const handleUpload = () => {
     if (uploadstatus === "done") {
@@ -18,10 +34,11 @@ const FileUpload = () => {
       setProgress(0);
       setUploadstatus("select");
     }
+    setUploadstatus("uploading");
   };
 
   return (
-    <div className="container">
+    <div className="main-container">
       <input
         type="file"
         onChange={(e) => setSelectFile(e.target.files[0])}
@@ -49,7 +66,7 @@ const FileUpload = () => {
             <div className="file-info">
               <div style={{ flex: 1 }}>
                 <h2>{selectFile.name}</h2>
-                <div className="progress-bar">
+                <div className="progress-bg">
                   <div
                     className="progess"
                     style={{ width: `${{ progress }}%` }}
@@ -77,9 +94,13 @@ const FileUpload = () => {
               </div>
             </div>
           </div>
+          <button className="btn" onClick={handleUpload}>
+            {uploadstatus === "select" || uploadstatus === "uploading"
+              ? "upload"
+              : "Done"}
+          </button>
         </>
       )}
-      <button className="btn">{handleUpload}</button>
     </div>
   );
 };
