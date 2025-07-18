@@ -1,5 +1,22 @@
 .main-container {
   box-shadow: 0px 10px 26px -4px rgb(0, 0, 0, 0.1);
+  background-color: navy;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.upload-area {
+  border: 2px dashed #aaa;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: #a792f1;
+  font-size: 24px;
+  margin: 16px 0;
 }
 
 .file-btn {
@@ -35,17 +52,13 @@
 }
 
 .file-card {
-  width: 350px;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  border-radius: 12px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  color: #2d2b2b;
-  background-color: #fff;
-  border: 2px solid rgb(95, 73, 241, 0.281);
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  box-shadow: 0px 10px 26px -4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  gap: 10px;
 }
 
 .file-info {
@@ -115,5 +128,14 @@
   border-radius: 8px;
   padding: 10px;
   margin-top: 10px;
+  cursor: pointer;
+}
+.btn {
+  background-color: white;
+  color: navy;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
 }
