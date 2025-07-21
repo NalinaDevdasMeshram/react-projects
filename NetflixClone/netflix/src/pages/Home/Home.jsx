@@ -3,8 +3,9 @@ import hero_title from "../../assets/hero_title.png";
 import Navbar from "../../Components/Navbar/Navbar";
 import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
+import Footer from "../../Components/Footer/Footer";
 import "./Home.css";
-import TitleCards from "../../Components/titleCards/titleCards";
+import TitleCards from "../../Components/TitleCards/TitleCards";
 const Home = () => {
   return (
     <div className="Home">
@@ -24,13 +25,19 @@ const Home = () => {
             </button>
             <button className="btn dark_info">
               <img src={info_icon} alt="" />
-              More Info
+              More Info{" "}
             </button>
           </div>
+          <TitleCards />
         </div>
       </div>
-
-      <TitleCards />
+      <div className="more-card">
+        <TitleCards title={"Blockbuster Movies"} />
+        <TitleCards title={"Only on the Netflix"} />
+        <TitleCards title={"Upcoming Movies"} />
+        <TitleCards title={"Top pic for you"} />
+      </div>
+      <Footer />
     </div>
   );
 };

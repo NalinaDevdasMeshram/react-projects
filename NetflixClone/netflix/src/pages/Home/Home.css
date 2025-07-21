@@ -57,3 +57,7 @@
 .hero_btn .btn.dark_info:hover {
   background: #6d6d6eb3;
 }
+
+.more-card {
+  padding-left: 6%;
+}
