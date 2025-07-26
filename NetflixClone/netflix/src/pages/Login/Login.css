@@ -50,8 +50,8 @@
   border: 0;
   outline: 0;
   border-radius: 4px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -63,12 +63,26 @@
   color: #b3b3b3;
   font-size: 13px;
 }
+
 .remember {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
 }
-.checkbox {
+
+.remember input {
   width: 18px;
   height: 18px;
+}
+
+.switch_login {
+  margin-top: 40px;
+  color: #737373;
+}
+
+.switch_login span {
+  margin-left: 6px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
 }
